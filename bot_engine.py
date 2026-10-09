@@ -54,3 +54,14 @@ class BotEngine:
         self.memory.user_message(user_query)
         self.memory.ai_message(ai_reply)
         return ai_reply
+
+if __name__ == "__main__":
+    engine = BotEngine()
+    print("کورتکس آماده است. برای خروج بنویس: exit")
+    while True:
+        user_input = input("شما: ").strip()
+        if user_input.lower() == "exit":
+            break
+        if not user_input:
+            continue
+        print("کورتکس:", engine.generate_response(user_input))

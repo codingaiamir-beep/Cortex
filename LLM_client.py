@@ -3,7 +3,7 @@ from typing import Dict, List, Optional
 
 try:
     from dotenv import load_dotenv
-except ImportError:  # اجازه می‌دهد تست‌های محلیِ بدون وابستگی اجرا شوند.
+except ImportError: 
     def load_dotenv() -> bool:
         return False
 
